@@ -1,37 +1,319 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,900,400italic,600italic);
+/*
+** -----------------------------------
+** STYLESHEET FOR TEATOR.ORG
+** COPYRIGHT EMILIE THALER 2014
+** WWW.EMILIETHALER.COM
+** -----------------------------------
+*/
+/*
+** -----------------------------------
+** UNIVERSAL & CONTAINERS
+** -----------------------------------
+*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
+iframe {
+  width: 100%; }
+
 body {
-  background-color: #fff;
-  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fdfcff;
+  font-family: 'Museo Sans Rounded', sans-serif;
   font-size: 16px; }
 
-.heading {
-  positon: relative;
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 400px;
-  text-align: center;
-  background-color: #f55e3f; }
-  .heading h1 {
-    font-size: 4em;
-    color: white;
-    letter-spacing: .05em;
-    margin: 0;
-    position: relative;
-    top: 4em; }
+  background-color: #3e3c39;
+  background-image: url(../img/dark_wall.png);
+  border-bottom: 1px #1f1e1c;
+  height: 60px;
+  overflow: auto; }
+  header img {
+    left: 4%;
+    width: 100px;
+    position: fixed;
+    top: 7px; }
+  header nav {
+    position: fixed;
+    top: 15px;
+    right: 4%;
+    width: 50%; }
+  header .nav-button {
+    padding: 1.4% 6%;
+    color: #fdfcff;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #7c7872;
+    box-shadow: 1px 1px 5px #33322f;
+    float: right;
+    margin-left: 1em; }
+  header #LogIn {
+    background-color: #41abda;
+    box-shadow: inset -1px 1px 1px #5fb8e0;
+    box-shadow: inset 1px -1px 2px #2ca2d6; }
+  header #SignUp {
+    background-color: #f26600;
+    box-shadow: inset -1px 1px 1px #ff730c;
+    box-shadow: inset 1px -1px 2px #d85b00; }
 
-.details {
-  height: 50%;
+.section {
   width: 100%;
+  overflow: auto; }
+
+.section-left {
+  width: 50%;
+  float: left;
+  padding: 1em; }
+
+.section-right {
+  width: 50%;
+  float: right;
+  padding: 1em; }
+
+.wrap {
+  padding: 4%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.quarter-column {
+  width: 25%;
+  float: left;
+  padding: 0 1%;
   text-align: center; }
-  .details p {
-    width: 60%;
-    margin: 3em auto 2em auto;
-    font-size: 1.2em;
-    font-style: italic; }
-  .details h2 {
-    text-transform: uppercase;
-    color: #1f74f5; }
+
+.rows {
+  font-size: .8em;
+  text-align: center;
+  margin-bottom: 4%; }
+  .rows img {
+    width: 20%; }
+  .rows h2 {
+    margin-bottom: 2em; }
+
+.row-1 {
+  overflow: auto;
+  margin-bottom: 4%; }
+  .row-1 .column {
+    width: 25%;
+    float: left;
+    padding: 2%; }
+
+.row-2 {
+  width: 75%;
+  margin: 0 auto;
+  clear: both;
+  overflow: auto; }
+  .row-2 .column {
+    width: 33%;
+    float: left;
+    padding: 2%; }
+
+/*
+** -----------------------------------
+** TYPOGRAPHY
+** -----------------------------------
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em; }
+
+.column h5 {
+  color: #217fa9;
+  font-size: 1.2em;
+  margin-bottom: .3em; }
+
+/*
+** -----------------------------------
+** SPECIAL SECTIONS
+** -----------------------------------
+*/
+#Hero {
+  background-image: url(../img/girl-writing.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 450px; }
+  #Hero div {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center; }
+    #Hero div p {
+      font-size: 2em;
+      margin-bottom: 1em;
+      color: #fdfcff;
+      text-shadow: 2px 2px #3e3c39; }
+    #Hero div a {
+      padding: 2%;
+      text-decoration: none;
+      color: #303a08;
+      background-color: #bce32b;
+      text-transform: uppercase; }
+
+#Stats {
+  background-color: #58a2c3;
+  background-image: url(../img/debut_light_blue.png);
+  color: #fdfcff;
+  border-top: 1px solid #41abda;
+  border-bottom: 1px solid #41abda;
+  text-shadow: 1px 1px 0 #6e787d; }
+  #Stats .section-left {
+    text-align: right;
+    font-size: 8em;
+    padding: 0 4% 4% 0;
+    font-family: Helvetica, Arial, sans-serif; }
+  #Stats .section-right {
+    font-size: 2em;
+    margin-top: -19px; }
+
+#TeatorIs img {
+  height: 100px; }
+
+.video h2 {
+  color: #54670e;
+  margin-bottom: .5em; }
+.video p {
+  color: #303a08;
+  line-height: 1.4em; }
+
+#Video1 {
+  background-color: #bce32b; }
+
+#Video2 {
+  background-color: #b5d737; }
+  #Video2 .section-left {
+    text-align: right; }
+
+#Donate {
+  background-color: #41abda;
+  background-image: url(../img/blue_wave.png); }
+  #Donate h2 {
+    color: #0d3242;
+    margin-bottom: .5em; }
+  #Donate p {
+    line-height: 1.5em;
+    color: black; }
+
+#HowItWorks {
+  padding-bottom: 2em; }
+
+/*
+** -----------------------------------
+** FORMS
+** -----------------------------------
+*/
+input[type="submit"] {
+  border: none;
+  border-radius: 3px;
+  background-color: #f26600;
+  text-transform: uppercase;
+  padding: 2%;
+  letter-spacing: .02%; }
+
+input[type="text"] {
+  border: none;
+  border-radius: 3px;
+  padding: 2%;
+  margin: 0 1% 1% 0;
+  color: #3e3c39; }
+
+#DonateForm {
+  font-size: 1.4em;
+  width: 100%;
+  padding: 4% 0;
+  text-align: center; }
+  #DonateForm input[type="text"] {
+    width: 20%; }
+  #DonateForm input[type="submit"] {
+    background-color: #bce32b;
+    color: #303a08; }
+
+/*
+** -----------------------------------
+** FOOTER
+** -----------------------------------
+*/
+footer {
+  background-color: #3e3c39;
+  background-image: url(../img/dark_wall.png);
+  color: #fff;
+  overflow: auto;
+  font-size: .75em;
+  padding: 4%; }
+  footer input[type="text"],
+  footer input[type="submit"] {
+    padding: 2% 4%; }
+  footer h4 {
+    margin-bottom: 8%;
+    font-size: 1.4em;
+    text-align: center;
+    color: #bce32b; }
+  footer a {
+    color: #fff;
+    text-decoration: none; }
+  footer small {
+    display: block;
+    clear: both; }
+
+.footer-column {
+  width: 33%;
+  float: left;
+  text-shadow: 1px 0px 2px #1f1e1c;
+  text-align: center;
+  margin-bottom: 4%; }
+  .footer-column:first-of-type {
+    text-align: left; }
+    .footer-column:first-of-type p {
+      margin-bottom: 4%; }
+  .footer-column a img {
+    width: 18%; }
+
+/*
+** -----------------------------------
+** MOBILE
+** -----------------------------------
+*/
+@media screen and (max-width: 480px) {
+  footer h4 {
+    margin-bottom: 2%; }
+
+  .row-2 {
+    width: 100%; }
+
+  .quarter-column,
+  .row-1 .column,
+  .row-2 .column {
+    width: 50%;
+    max-width: 50%; }
+
+  #Stats {
+    font-size: .6em; }
+    #Stats .section-left {
+      text-align: center;
+      padding: 0; }
+
+  .row-2 .column:last-of-type {
+    margin: 0 auto; }
+
+  .footer-column,
+  .section-left,
+  .section-right {
+    width: 100%;
+    text-align: center; } }
+/*
+** -----------------------------------
+** TABLET
+** -----------------------------------
+*/
+@media screen and (max-width: 680px) {
+  #Hero {
+    height: auto;
+    padding: 6em 1em 3em 1em;
+    overflow: auto;
+    background-size: 200%; } }
