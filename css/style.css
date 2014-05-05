@@ -20,7 +20,7 @@ iframe {
 
 body {
   background-color: #fdfcff;
-  font-family: 'Museo Sans Rounded', sans-serif;
+  font-family: 'Museo Sans Rounded', 'museo-sans-rounded', sans-serif;
   font-size: 16px; }
 
 header {
@@ -32,7 +32,7 @@ header {
   background-image: url(../img/dark_wall.png);
   border-bottom: 1px #1f1e1c;
   height: 60px;
-  overflow: auto; }
+  overflow: hidden; }
   header img {
     left: 4%;
     width: 100px;
@@ -76,7 +76,7 @@ header {
 
 .wrap {
   padding: 4%;
-  max-width: 1200px;
+  max-width: 940px;
   margin: 0 auto; }
 
 .quarter-column {
@@ -120,7 +120,7 @@ header {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .05em; }
+  letter-spacing: .025em; }
 
 .column h5 {
   color: #217fa9;
@@ -138,10 +138,9 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 100%;
   height: 450px; }
   #Hero div {
-    width: 75%;
     margin: 0 auto;
     position: relative;
-    top: 40%;
+    top: 30%;
     transform: translateY(-50%);
     text-align: center; }
     #Hero div p {
@@ -280,6 +279,14 @@ footer {
 ** -----------------------------------
 */
 @media screen and (max-width: 480px) {
+  #DonateForm input[type="submit"] {
+    margin-top: .5em; }
+
+  nav {
+    width: 70%; }
+    nav .nav-button {
+      padding: 4%; }
+
   footer h4 {
     margin-bottom: 2%; }
 
@@ -297,6 +304,8 @@ footer {
     #Stats .section-left {
       text-align: center;
       padding: 0; }
+    #Stats .section-right {
+      text-align: center; }
 
   .row-2 .column:last-of-type {
     margin: 0 auto; }
@@ -305,7 +314,18 @@ footer {
   .section-left,
   .section-right {
     width: 100%;
-    text-align: center; } }
+    text-align: center; }
+
+  #Video1 .section-right {
+    text-align: left; }
+
+  #HowItWorks {
+    font-size: .75em; }
+    #HowItWorks h2 {
+      font-size: 2em;
+      text-align: center; }
+    #HowItWorks img {
+      width: 90%; } }
 /*
 ** -----------------------------------
 ** TABLET
@@ -314,6 +334,15 @@ footer {
 @media screen and (max-width: 680px) {
   #Hero {
     height: auto;
-    padding: 6em 1em 3em 1em;
+    padding: 6em .4em 3em .4em;
     overflow: auto;
-    background-size: 200%; } }
+    background-size: 255%; }
+    #Hero div {
+      line-height: 2em; }
+      #Hero div a {
+        padding: 1em; }
+
+  .row-2 .column:last-child {
+    width: 50%;
+    float: none;
+    margin: 0 auto; } }
