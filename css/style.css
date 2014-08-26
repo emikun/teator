@@ -11,8 +11,6 @@
 ** -----------------------------------
 */
 * {
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
@@ -57,10 +55,14 @@ header {
     background-color: #41abda;
     box-shadow: inset -1px 1px 1px #5fb8e0;
     box-shadow: inset 1px -1px 2px #2ca2d6; }
+    header #LogIn:hover {
+      background-color: #6cbee2; }
   header #SignUp {
     background-color: #f26600;
     box-shadow: inset -1px 1px 1px #ff730c;
     box-shadow: inset 1px -1px 2px #d85b00; }
+    header #SignUp:hover {
+      background-color: #ff8126; }
 
 .section {
   width: 100%;
